@@ -1,0 +1,29 @@
+{
+    "name": "jucloud/extensions-pay-laravel",
+    "description": "最优雅的在线支付Laravel扩展包",
+    "keywords": ["alipay", "wechat", "pay", "laravel", "package"],
+    "support": {
+        "issues": "https://github.com/jucloud/extensions-pay-laravel/issues",
+        "source": "https://github.com/jucloud/extensions-pay-laravel"
+    },
+    "require": {
+        "illuminate/support": "^5.1 || ^6.0 || ^7.0 || ^8.0",
+        "jucloud/extensions-pay": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "JuCloud\\Extensions\\Pay\\Laravel\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JuCloud\\Extensions\\Pay\\Laravel\\PayServiceProvider"
+            ],
+            "aliases": {
+                "Pay": "JuCloud\\Extensions\\Pay\\Laravel\\Facades\\Pay"
+            }
+        }
+    },
+    "license": "MIT"
+}
